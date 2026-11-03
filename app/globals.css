@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: "Inter", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --color-ink: #111820;
+  --color-signal: #ffb400;
+  --color-teal: #00a6a6;
+  --color-coral: #E61537;
+  --color-paper: #f4f1eb;
+}
+
+:root {
+  color-scheme: light;
+  font-family: var(--font-sans);
+  background: var(--color-paper);
+}
+
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--color-paper); color: var(--color-ink); }
+* { box-sizing: border-box; }
+::selection { background: var(--color-coral); color: white; }
