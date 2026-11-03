@@ -5,16 +5,17 @@
   --color-ink: #111820;
   --color-signal: #ffb400;
   --color-teal: #00a6a6;
-  --color-coral: #ef334d;
+  --color-coral: #E61537;
+  --color-paper: #f4f1eb;
 }
 
 :root {
-  color-scheme: dark;
+  color-scheme: light;
   font-family: var(--font-sans);
-  background: var(--color-ink);
+  background: var(--color-paper);
 }
 
 html { scroll-behavior: smooth; }
-body { margin: 0; background: var(--color-ink); }
+body { margin: 0; background: var(--color-paper); color: var(--color-ink); }
 * { box-sizing: border-box; }
-::selection { background: var(--color-signal); color: var(--color-ink); }
+::selection { background: var(--color-coral); color: white; }
