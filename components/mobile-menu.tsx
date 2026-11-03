@@ -5,11 +5,5 @@ import { useState } from "react"
 
 export function MobileMenu() {
   const [open, setOpen] = useState(false)
-  return <>
-    <button className="mobile-trigger" aria-label={open ? "Cerrar menú" : "Abrir menú"} aria-expanded={open} onClick={() => setOpen(!open)}>{open ? <X size={22} /> : <Menu size={22} />}</button>
-    {open && <div className="mobile-panel">
-      <a href="#inicio" onClick={() => setOpen(false)}>Inicio</a><a href="#nosotros" onClick={() => setOpen(false)}>Nosotros</a><a href="#productos" onClick={() => setOpen(false)}>Productos</a><a href="#contacto" onClick={() => setOpen(false)}>Contacto</a>
-      <a className="quote-button" href="#contacto" onClick={() => setOpen(false)}>Solicitar cotización</a>
-    </div>}
-  </>
+  return <div className="lg:hidden"><button type="button" onClick={() => setOpen((current) => !current)} className="flex size-10 items-center justify-center rounded-full border border-white/15 text-white" aria-label={open ? "Cerrar menú" : "Abrir menú"} aria-expanded={open}>{open ? <X /> : <Menu />}</button>{open && <nav className="absolute inset-x-0 top-full flex flex-col gap-5 border-b border-white/10 bg-[#111820] px-6 py-7 text-sm font-medium uppercase tracking-[0.14em] text-white/70" aria-label="Navegación móvil"><a onClick={() => setOpen(false)} href="#inicio">Inicio</a><a onClick={() => setOpen(false)} href="#nosotros">Nosotros</a><a onClick={() => setOpen(false)} href="#productos">Productos</a><a onClick={() => setOpen(false)} href="#contacto">Contacto</a></nav>}</div>
 }
