@@ -1,6 +1,8 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { ArrowLeft, ArrowUpRight, CheckCircle2 } from "lucide-react"
+import { Header } from "@/components/header"
+import { Footer } from "@/components/footer"
 
 const siteUrl = "https://nt-pinturas.vercel.app"
 
@@ -28,10 +30,7 @@ const facts = [
 export default function PinturaLiquidaIndustrialPage() {
   return (
     <main className="min-h-screen bg-[#f4f1eb] text-[#111820]">
-      <header className="flex items-center justify-between border-b border-[#111820]/10 px-6 py-5 lg:px-12">
-        <Link href="/" className="text-sm font-bold uppercase tracking-[0.2em]">NT Pinturas</Link>
-        <Link href="/#contacto" className="text-xs font-semibold uppercase tracking-wider hover:text-[#018D8D]">Contacto <ArrowUpRight className="inline" size={14} /></Link>
-      </header>
+      <Header />
       <section className="mx-auto max-w-5xl px-6 py-20 lg:py-28">
         <Link href="/#productos" className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#018D8D]"><ArrowLeft size={14} /> Todos los productos</Link>
         <p className="mt-12 text-xs font-bold uppercase tracking-[0.24em] text-[#018D8D]">Vitospray / Pintura líquida</p>
@@ -64,7 +63,7 @@ export default function PinturaLiquidaIndustrialPage() {
         </div>
         <p className="mt-12 text-sm text-[#111820]/55">También podés conocer nuestra línea de <Link className="font-semibold text-[#018D8D] underline" href="/productos/pintura-en-polvo">pintura en polvo electrostática Sinteplast</Link>.</p>
       </section>
-      <footer className="bg-[#111820] px-6 py-8 text-xs text-white/55 lg:px-12"><Link href="/">NT Pinturas</Link> · Distribución industrial · <Link href="/#contacto" className="underline">Contacto</Link></footer>
+      <Footer />
     </main>
   )
 }
