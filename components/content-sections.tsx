@@ -57,7 +57,7 @@ export function ProductsSection() {
       </div>
       <div className="divide-y divide-[#111820]/10 border-y border-[#111820]/10">
         {products.map((product) => (
-          <article className="group grid gap-5 py-9 sm:grid-cols-[5rem_1fr_auto] sm:items-start sm:gap-8" key={product.number}>
+          <article className="group grid gap-5 py-9 sm:grid-cols-[5rem_1fr] sm:items-start sm:gap-8" key={product.number}>
             <span className={`pt-1 text-sm font-semibold ${product.tone}`}>{product.number}</span>
             <div>
               <p className={`mb-2 text-xs font-bold uppercase tracking-[0.2em] ${product.tone}`}>{product.brand}</p>
@@ -72,9 +72,6 @@ export function ProductsSection() {
                 Conocer producto <ArrowUpRight size={15} />
               </Link>
             </div>
-            <a href="#contacto" className="flex size-11 items-center justify-center rounded-full border border-[#111820]/15 text-[#111820] transition-all hover:border-[#018D8D] hover:bg-[#018D8D] hover:text-white" aria-label={`Consultar por ${product.brand}`}>
-              <ArrowUpRight />
-            </a>
           </article>
         ))}
       </div>
