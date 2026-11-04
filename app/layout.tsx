@@ -1,8 +1,6 @@
 import type { Metadata } from "next"
 import "./globals.css"
 
-const socialImage = "/nt-pinturas-opengraph.jpg"
-
 export const metadata: Metadata = {
   title: "NT Pinturas | Soluciones en pintura para la industria",
   description: "Pinturas y recubrimientos industriales para empresas, talleres y fabricantes.",
@@ -12,13 +10,13 @@ export const metadata: Metadata = {
     siteName: "NT Pinturas",
     title: "NT Pinturas | Soluciones en pintura para la industria",
     description: "Pinturas y recubrimientos industriales para empresas, talleres y fabricantes.",
-    images: [{ url: socialImage, width: 1200, height: 630, alt: "NT Pinturas — Pinturas y recubrimientos industriales" }],
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "NT Pinturas — Pinturas y recubrimientos industriales" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "NT Pinturas | Soluciones en pintura para la industria",
     description: "Pinturas y recubrimientos industriales para empresas, talleres y fabricantes.",
-    images: [socialImage],
+    images: ["/opengraph-image"],
   },
 }
 
