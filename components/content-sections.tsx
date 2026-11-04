@@ -1,4 +1,5 @@
 import { ArrowUpRight, Mail, Phone } from "lucide-react"
+import Link from "next/link"
 
 const products = [
   {
@@ -8,6 +9,7 @@ const products = [
     text: "Pintura al solvente de fabricación nacional, orientada a trabajos de mantenimiento, renovación y protección de superficies en entornos industriales.",
     details: ["Presentaciones de 4 y 20 litros", "Aplicación con rodillo o soplete", "Secado informado: 15 a 20 minutos"],
     tone: "text-[#018D8D]",
+    href: "/productos/pintura-liquida-industrial",
   },
   {
     number: "02",
@@ -16,6 +18,7 @@ const products = [
     text: "Recubrimiento para piezas y superficies metálicas, aplicado con pistola electrostática y curado posterior en horno.",
     details: ["Presentación de 25 kg", "Colores según carta RAL", "Orientada a talleres y fábricas metalúrgicas"],
     tone: "text-[#E61537]",
+    href: "/productos/pintura-en-polvo",
   },
 ]
 
@@ -54,7 +57,7 @@ export function ProductsSection() {
       </div>
       <div className="divide-y divide-[#111820]/10 border-y border-[#111820]/10">
         {products.map((product) => (
-          <article className="group grid gap-5 py-9 sm:grid-cols-[5rem_1fr_auto] sm:items-start sm:gap-8" key={product.number}>
+          <article className="group grid gap-5 py-9 sm:grid-cols-[5rem_1fr] sm:items-start sm:gap-8" key={product.number}>
             <span className={`pt-1 text-sm font-semibold ${product.tone}`}>{product.number}</span>
             <div>
               <p className={`mb-2 text-xs font-bold uppercase tracking-[0.2em] ${product.tone}`}>{product.brand}</p>
@@ -65,10 +68,10 @@ export function ProductsSection() {
                   <li key={detail} className="text-xs leading-5 text-[#111820]/45">— {detail}</li>
                 ))}
               </ul>
+              <Link href={product.href} className="mt-5 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.15em] text-[#018D8D] hover:underline">
+                Conocer producto <ArrowUpRight size={15} />
+              </Link>
             </div>
-            <a href="#contacto" className="flex size-11 items-center justify-center rounded-full border border-[#111820]/15 text-[#111820] transition-all hover:border-[#018D8D] hover:bg-[#018D8D] hover:text-white" aria-label={`Consultar por ${product.brand}`}>
-              <ArrowUpRight />
-            </a>
           </article>
         ))}
       </div>
