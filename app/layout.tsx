@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
 const siteUrl = "https://nt-pinturas.vercel.app"
@@ -111,6 +112,7 @@ export default function RootLayout({
           }}
         />
         {children}
+        <Analytics />
       </body>
     </html>
   )
